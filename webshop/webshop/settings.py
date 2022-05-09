@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zlabk$@9so!-+$mls#j_^_ahj)1ua63=j+%i27m8j-8i!m6q+r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,13 +78,26 @@ WSGI_APPLICATION = 'webshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+'''
 
+# connect to mysql database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'products',
+        'HOST': 'ls-9731c39b4d01cda28b01da8e1f509a4f339b75d8.ckgxjqiree9u.eu-central-1.rds.amazonaws.com',
+        'PORT': '3306',
+        'USER': 'sunil',
+        'PASSWORD': 'meroghar',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
