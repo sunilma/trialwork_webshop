@@ -4,7 +4,8 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 ### Technologies Used
-1. Django
+1. Django v4.0.4
+2. Bootstrap v5.1.3
 
 ### Prerequisites
 
