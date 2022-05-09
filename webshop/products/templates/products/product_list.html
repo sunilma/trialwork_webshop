@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include "searchbar.html" %}
+<div class="row">
+{% for product in object_list %}
+    <div class="col-lg-3 p-3">
+        <img src="https://picsum.photos/300/200" alt="" class="thumbnail">
+        <div class="box-element">
+            <h4><strong>{{ product.name}}</strong></h4>
+            <hr>
+            <button data-product={{product.id}} class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+            <a class="btn btn-outline-success" href="{{product.get_absolute_url}}">View</a>
+            <h4 style="display: inline_block; float:right"><strong>&euro; {{ product.price|floatformat:2 }}</strong></h4>
+        </div>
+
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+<form class="d-flex mx-1 my-5" action="{% url 'products' %}" method="get">
+    <input name="q" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+<hr>
+<div class="dropdown align-right">
+  <a type="button" class="btn btn-primary btn-lg" href="{% url 'product-create' %}">Add Product</a>
+</div>

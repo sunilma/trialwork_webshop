@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card my-5">
+    <img src="https://picsum.photos/900/400" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3 class="card-title">Name: {{ product.name }}</h3>
+      <hr>
+      <h5>Product Code : {{ product.code }}</h5>
+      <h4>Price : &euro; {{ product.price|floatformat:2 }}</h4>
+      
+      <p class="card-text">{{ product.description }}</p>
+      <button data-product={{product.id}} class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+    </div>
+  </div>
+
+{% endblock %}
